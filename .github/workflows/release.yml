@@ -7,6 +7,9 @@ on:
 
 jobs:
   build-for-release:
+    permissions:
+      contents: read
+      id-token: write
     uses: ./.github/workflows/factory.yml
     with:
       tag: ${{ github.ref_name }}
